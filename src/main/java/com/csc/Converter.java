@@ -37,4 +37,14 @@ public class Converter {
       return String.format("%d lbs %d oz", pounds, ounces_remaining);
     }
   }
+  
+  public String toOunces(int pounds, int ounces) {
+    int total_ounces = pounds * 16 + ounces;
+    
+    if (total_ounces == 1) {
+      return String.format("%d ounce", total_ounces);
+    } else {
+      return String.format("%d ounces", total_ounces);
+    }
+  }
 }
