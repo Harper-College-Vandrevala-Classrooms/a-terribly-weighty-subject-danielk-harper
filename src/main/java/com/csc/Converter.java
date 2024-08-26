@@ -3,7 +3,11 @@ package com.csc;
 import java.util.*;
 
 public class Converter {
-
+  
+  public String toPounds() {
+    return toPounds(0);
+  }
+  
   public String toPounds(int ounces) {
     // if we have exactly one pound in ounces
     if (ounces == 16) {
@@ -15,7 +19,11 @@ public class Converter {
     // converts a double to a string with the required precision then returns it.
     return String.format("%.4f lbs", pounds);
   }
-
+  
+  public String toPoundsAndOunces() {
+    return toPoundsAndOunces(0);
+  }
+  
   public String toPoundsAndOunces(int ounces) {
     int pounds = ounces / 16;
     
